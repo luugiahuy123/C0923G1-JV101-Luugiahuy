@@ -11,18 +11,17 @@
     let a = +prompt("nhập a");
     let b = +prompt("nhập b");
     let c = +prompt("nhập c");
-    if(a == parseInt(a) && b == parseInt(b) && c == parseInt(c)) {
+    if (a === parseInt(a) && b === parseInt(b) && c === parseInt(c)) {
         let max = a;
-        if (max < b) {
-            max = b;
-        } else (max < c);
+        if ( max < b) {
+        } else ( max < c);
         {
             max = c;
         }
         document.write("giá trị lớn nhất là: " + max);
-    }
-    else
+    } else {
         alert("nhập số nguyên");
+    }
 </script>
 </body>
 </html>
