@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>soNguyenTo</title>
+</head>
+<body>
+<script>
+     let countPrime = 0;
+     let num = 2;
+     let count;
+     while (countPrime < 30) {
+         count = 0;
+         for (let i = 2; i <= Math.sqrt(num); i++) {
+             if (num % i === 0) {
+                 count++;
+                 break;
+             }
+         }if (count === 0) {
+            document.write(num + "<br>");
+            countPrime++;
+        }
+         num++;
+     }
+</script>
+</body>
+</html>
