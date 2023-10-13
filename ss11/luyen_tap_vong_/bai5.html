@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let a = 0
-    let b = 1
+    let fibo1 = 0
+    let fibo2 = 1
     let fibonext
     let sum = 1
     for (let i = 3; i <= 20 ; i++) {
-        fibonext = a + b;
-        a = b;
-        b = fibonext;
+        fibonext = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fibonext;
         sum +=fibonext
     } document.write(sum)
 
