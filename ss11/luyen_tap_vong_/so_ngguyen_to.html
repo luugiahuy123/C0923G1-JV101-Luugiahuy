@@ -6,22 +6,23 @@
 </head>
 <body>
 <script>
-     let countPrime = 0;
-     let num = 1;
-     let count;
-     while (countPrime < 30) {
-         count = 0;
-         for (let i = 2; i <= Math.sqrt(num); i++) {
-             if (num % i === 0) {
-                 count++;
-                 break;
-             }
-         }if (count === 0) {
+    let countPrime = 0;
+    let num = 1;
+    let count;
+    while (countPrime < 30) {
+        count = 0;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                count++;
+                break;
+            }
+        }
+        if (count === 0) {
             document.write(num + "<br>");
             countPrime++;
         }
-         num++;
-     }
+        num++;
+    }
 </script>
 </body>
 </html>

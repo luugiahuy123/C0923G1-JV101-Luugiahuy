@@ -5,7 +5,8 @@
     <script src="doitien.js"></script>
     <style>
         td {
-            width: 15em; height: 2em;
+            width: 15em;
+            height: 2em;
         }
     </style>
 </head>
@@ -18,7 +19,7 @@
         <td></td>
     </tr>
     <tr>
-        <td><input type="text" id="Amount"></td>
+        <td><input id="Amount" type="text"></td>
         <td>
             <select id="From">
                 <option value="VND">VND</option>
@@ -28,10 +29,12 @@
         <td>
             <select id="To">
                 <option value="VND">VND</option>
-                <option  value="USD">USD</option>
+                <option value="USD">USD</option>
             </select>
         </td>
-        <td><button onclick="ChangeMoney()">Convert</button></td>
+        <td>
+            <button onclick="ChangeMoney()">Convert</button>
+        </td>
     </tr>
 </table>
 

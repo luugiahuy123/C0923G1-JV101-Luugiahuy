@@ -10,17 +10,17 @@
     let b = +prompt("nhập b")
     let c = +prompt("nhập c")
     let delta = b * b - 4 * a * c
-    if ( a !== 0) {
-         if ( delta < 0 ){
-             alert("phương trình vô nghiệm");
-         } else if ( delta == 0 ){
-             delta = ( - b) / (2 * a)
-             alert("nghiệm kep");
+    if (a !== 0) {
+        if (delta < 0) {
+            alert("phương trình vô nghiệm");
+        } else if (delta == 0) {
+            delta = (-b) / (2 * a)
+            alert("nghiệm kep");
         } else {
-             let x1 = (-b + Math.sqrt(delta)) / (2 * a);
-             let x2 = (-b - Math.sqrt(delta)) / (2 * a);
-             alert("2 ngiệm phân biêt");
-         }
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert("2 ngiệm phân biêt");
+        }
     }
 </script>
 </body>

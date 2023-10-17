@@ -6,16 +6,16 @@
 </head>
 <body>
 <script>
-  let loan = +prompt("Nhập số tiền vay")
-  let month = +prompt("nhập thời gian vay")
-  let interest = +prompt("Nhập lãi")
-  let tienTra;
-  if ( loan > 0 && month > 0 ){
-    tienTra = loan * Math.pow((1+interest/100),month);
-    alert (tienTra)
-  } else {
-    alert ("nhap sai")
-  }
+    let loan = +prompt("Nhập số tiền vay")
+    let month = +prompt("nhập thời gian vay")
+    let interest = +prompt("Nhập lãi")
+    let tienTra;
+    if (loan > 0 && month > 0) {
+        tienTra = loan * Math.pow((1 + interest / 100), month);
+        alert(tienTra)
+    } else {
+        alert("nhap sai")
+    }
 
 
 </script>

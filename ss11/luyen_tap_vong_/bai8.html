@@ -12,7 +12,7 @@
         let number = +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?")
         let number_ran = Math.floor(Math.random() * number);
         console.log(number_ran);
-        let number_check = +prompt ("Nhập số bạn đoán");
+        let number_check = +prompt("Nhập số bạn đoán");
         let count = 0;
         while (number_check !== number_ran) {
             count++;
@@ -22,9 +22,9 @@
             } else if (number_check < number_ran) {
                 alert("Số bạn đoán bé hơn");
             } else {
-                alert ("Số bạn đoán lớn hơn")
+                alert("Số bạn đoán lớn hơn")
             }
-            number_check = prompt ("Nhập số bạn đoán");
+            number_check = prompt("Nhập số bạn đoán");
         }
         if (count == 3) {
             document.write("Bạn hết số lần đoán")

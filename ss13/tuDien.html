@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tuDien</title>
+</head>
+<body>
+<label for="string">Nhập từ: </label>
+<input id="string" name="" type="text">
+<button onclick="str()">Dịch</button>
+<p id="result"></p>
+</body>
+<body>
+<script>
+    let str = prompt("nhap tu tim kiem");
+    let vietNamArray = ["chuối", "táo"];
+    let englishArray = ["banana", "apple"];
+    let index_eng = 0;
+    let result = "";
+    for (let i = 0; i < englishArray.length; i++) {
+        if (str === englishArray[i]) {
+            index_eng = i;
+            for (let j = 0; j < vietNamArray; j++) {
+                if (index_eng === j) {
+                    result = vietNamArray[j];
+                }
+            }
+
+        }
+        console.log(result)
+    }
+
+</script>
+</body>
+</html>

@@ -7,11 +7,9 @@ function ChangeMoney() {
 
     if (From == "USD" && To == "VND") {
         Result = "Result: " + (Amount * 23000) + " Đ";
-    }
-    else if (From == "VND"&& To =="USD"){
-        Result = "Result: "+ (Amount / 23000) + " $";
-    }
-    else if (From == "VND") {
+    } else if (From == "VND" && To == "USD") {
+        Result = "Result: " + (Amount / 23000) + " $";
+    } else if (From == "VND") {
         Result = "Result: " + Amount + " Đ"
     } else {
         Result = "Result: " + Amount + " $"

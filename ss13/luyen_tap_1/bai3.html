@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let array = []
+  let lengOfArray = parseInt(prompt("nhap so nguyen"))
+  for (let i = 0;i < lengOfArray ; i++) {
+       array[i] = +prompt("nhập số nguyên" + i)
+  }
+  let max = 0;
+  let tong = 0
+  let trungBinh = 0
+  for (let i = 0; i < array.length; i++) {
+      if (array[i] > max) {
+          max = array[i];
+      } tong +=array[i];
+      }trungBinh = tong / array.length
+  document.write(max + "so lon nhat" + "<br>" )
+  document.write(trungBinh +"gia tri trung binh" + "<br>")
+
+</script>
+</body>
+</html>
