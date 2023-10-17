@@ -5,32 +5,29 @@
     <title>tuDien</title>
 </head>
 <body>
-<label><input type="text" id="word" placeholder="nhập từ"></label>
-<button type="button" onclick="trans()">Translate</button>
-<br>
-<div id="result"></div>
-</body>
-<body>
-
+<label>Nhap tu: </label>
+<input type="text" id="input" placeholder="nhập từ">
+<button onclick="transcript()">Dich</button>
+<p id="result"></p>
 <script>
-    function trans()  {
-    let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
-    let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
-    let string
-    let index_eng = 0;
-    let result = "";
-    for (let i = 0; i < arr_eng.length; i++) {
-        if ( string === arr_eng[i]) {
-            index_eng = i;
-            for (let j = 0; j < arr_vie.length; j++) {
-                if ( index_eng === j) {
-                    result = arr_vie[j];
+    function transcript()  {
+        let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        let string = document.getElementById("input").value;
+        let index = 0;
+        let result = "";
+        for (let i = 0; i < arr_eng.length; i++) {
+            if ( string === arr_eng[i]) {
+                index = i;
+                for (let j = 0; j < arr_vie.length; j++) {
+                    if ( index === j) {
+                        result = arr_vie[j];
+                    }
                 }
             }
         }
+        document.getElementById("result").innerHTML = result;
     }
-    }
-    document.getElementById("result")
 
 
 
