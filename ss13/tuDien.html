@@ -5,30 +5,35 @@
     <title>tuDien</title>
 </head>
 <body>
-<label for="string">Nhập từ: </label>
-<input id="string" name="" type="text">
-<button onclick="str()">Dịch</button>
-<p id="result"></p>
+<label><input type="text" id="word" placeholder="nhập từ"></label>
+<button type="button" onclick="trans()">Translate</button>
+<br>
+<div id="result"></div>
 </body>
 <body>
+
 <script>
-    let str = prompt("nhap tu tim kiem");
-    let vietNamArray = ["chuối", "táo"];
-    let englishArray = ["banana", "apple"];
+    function trans()  {
+    let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+    let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+    let string
     let index_eng = 0;
     let result = "";
-    for (let i = 0; i < englishArray.length; i++) {
-        if (str === englishArray[i]) {
+    for (let i = 0; i < arr_eng.length; i++) {
+        if ( string === arr_eng[i]) {
             index_eng = i;
-            for (let j = 0; j < vietNamArray; j++) {
-                if (index_eng === j) {
-                    result = vietNamArray[j];
+            for (let j = 0; j < arr_vie.length; j++) {
+                if ( index_eng === j) {
+                    result = arr_vie[j];
                 }
             }
-
         }
-        console.log(result)
     }
+    }
+    document.getElementById("result")
+
+
+
 
 </script>
 </body>
