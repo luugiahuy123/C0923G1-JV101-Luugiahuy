@@ -15,17 +15,14 @@
         let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
         let string = document.getElementById("input").value;
         let index = 0;
-        let result = "";
+        let result;
         for (let i = 0; i < arr_eng.length; i++) {
-            if ( string === arr_eng[i]) {
+            if (string === arr_eng[i]) {
                 index = i;
-                for (let j = 0; j < arr_vie.length; j++) {
-                    if ( index === j) {
-                        result = arr_vie[j];
-                    }
-                }
+                break;
             }
         }
+        result = arr_vie[index];
         document.getElementById("result").innerHTML = result;
     }
 
