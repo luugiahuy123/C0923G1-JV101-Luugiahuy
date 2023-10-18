@@ -6,11 +6,11 @@
 </head>
 <body>
 <label>Nhap tu: </label>
-<input type="text" id="input" placeholder="nhập từ">
+<input id="input" placeholder="nhập từ" type="text">
 <button onclick="transcript()">Dich</button>
 <p id="result"></p>
 <script>
-    function transcript()  {
+    function transcript() {
         let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
         let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
         let string = document.getElementById("input").value;
@@ -25,8 +25,6 @@
         result = arr_vie[index];
         document.getElementById("result").innerHTML = result;
     }
-
-
 
 
 </script>

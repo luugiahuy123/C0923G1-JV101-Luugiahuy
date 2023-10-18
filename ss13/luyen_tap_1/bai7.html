@@ -12,14 +12,12 @@
     }
     let v = +prompt("nhap so V")
     let index = array.indexOf(v);
-    if (index !== -1){
-        for (let i = index; i < array.length ; i++) {
+    if (index !== -1) {
+        for (let i = index; i < array.length; i++) {
             array[i] = array[i - 1];
         }
         array[array.length - 1] = 0
-        document.write(array)
-    } else {
-    } document.write("sai");
+    }
 </script>
 </body>
 </html>

@@ -12,7 +12,11 @@
     }
     let v = +prompt("nhap so V")
     for (let i = 0; i < array.length; i++) {
-        if (array[i] === v ){
+        if (array[i] === v) {
+            count = 1;
+            break
+        }
+        if (count === 1) {
             document.write("v is in the array");
         } else {
             document.write("v is not in the array");

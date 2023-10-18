@@ -6,24 +6,24 @@
 </head>
 <body>
 <script>
-  let arrA = [];
-  for (let i = 0; i < 10; i++) {
-    arrA[i] = +prompt("nhap mang A");
-  }
-  let arrB = [];
-  for (let i = 0; i < 10; i++) {
-    arrB[i] = +prompt("nhap mang B")
-  }
-  let arrC = []
-  for (let i = 0; i < 10; i++){
-    {
-      arrC[i] = arrA[i];
+    let arrA = [];
+    for (let i = 0; i < 10; i++) {
+        arrA[i] = +prompt("nhap mang A");
     }
-    for (let j = 0; j < 10; j++) {
-      arrC[j + 10] = arrB[j]
+    let arrB = [];
+    for (let i = 0; i < 10; i++) {
+        arrB[i] = +prompt("nhap mang B")
     }
-  }
-  document.write(arrC)
+    let arrC = []
+    for (let i = 0; i < 10; i++) {
+        {
+            arrC[i] = arrA[i];
+        }
+        for (let j = 0; j < 10; j++) {
+            arrC[j + 10] = arrB[j]
+        }
+    }
+    document.write(arrC)
 
 </script>
 </body>
