@@ -11,14 +11,15 @@
         array[i] = +prompt("nhap so nguyen")
     }
     let v = +prompt("nhap so V")
-    let index = arr.indexOf(v);
+    let index = array.indexOf(v);
     if (index !== -1){
         for (let i = index; i < array.length ; i++) {
             array[i] = array[i - 1];
         }
         array[array.length - 1] = 0
+        document.write(array)
     } else {
-    } document.write(array);
+    } document.write("sai");
 </script>
 </body>
 </html>
