@@ -6,10 +6,18 @@
 </head>
 <body>
 <script>
-    let arr = ['c', 's', 'c', '2', '6', '1']
-    let reversedArr = arr.reverse();
-    let result = reversedArr.join('');
-    console.log(result);
+    let arr = [];
+    let lengthOfArr = +parseInt(prompt("Nhập độ dài của mảng"));
+    for (let i = 0; i < lengthOfArr; i++) {
+        arr[i] = prompt("nhập giá trị phần tử thứ " + i);
+    }
+    let swapValue;
+    for (let i = 0; i < lengthOfArr / 2; i++) {
+        swapValue = arr[i];
+        arr[i] = arr[lengthOfArr - 1 - i];
+        arr[lengthOfArr - 1 - i] = swapValue;
+    }
+    document.write(arr.join(""));
 
 </script>
 </body>
