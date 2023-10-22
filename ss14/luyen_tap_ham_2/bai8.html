@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverse(arr) {
+        return arr.reverse();
+    }
+
+    let arr = [];
+    let lengthOfArr = +parseInt(prompt("Nhập độ dài của mảng"));
+    for (let i = 0; i < lengthOfArr; i++) {
+        arr[i] = prompt("nhập giá trị phần tử thứ " + i);
+    }
+    alert(reverse(arr))
+</script>
+</body>
+</html>

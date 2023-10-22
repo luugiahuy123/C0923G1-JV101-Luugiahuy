@@ -6,7 +6,18 @@
 </head>
 <body>
 <script>
-  
+    function tinh_gia_thua(num) {
+        let giai_thua = 1;
+        for (let i = 1; i <= num; i++) {
+            giai_thua *= i;
+        }
+        return giai_thua;
+    }
+
+    let num = +parseInt(prompt("nhap so"));
+    document.write(tinh_gia_thua(num))
+
+
 </script>
 
 </body>

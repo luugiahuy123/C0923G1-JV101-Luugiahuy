@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countNumber() {
+        let count = 0;
+        let characters = prompt("ky tu ban muon kiem tra");
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === characters) {
+                count++;
+            }
+        }
+
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let arr = [];
+    let lengthOfArr = +parseInt(prompt("Nhập độ dài của mảng"));
+    for (let i = 0; i < lengthOfArr; i++) {
+        arr[i] = prompt("nhập giá trị phần tử thứ " + i);
+    }
+    alert(countNumber());
+</script>
+</body>
+</html>
