@@ -7,14 +7,17 @@
 <body>
 <script>
     function checkNumber(check) {
-        return isNaN(check);
+        if (isNaN(parseInt(check))) {
+            return false;
+        }
+        return true;
     }
 
     let check = prompt("nhap ky tu")
     if (checkNumber(check)) {
-        document.write("false");
+        alert("la ky tu so");
     } else {
-        document.write("true");
+        alert("ko phai ky tu so");
     }
 
 </script>

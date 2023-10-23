@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        rectangularArea() {
+            return this.length * this.width;
+        }
+
+        rectanglePerimeter() {
+            return 2 * (this.length + this.width);
+        }
+    }
+
+    let length = +prompt("nhap chieu dai")
+    let width = +prompt("nhap chieu rong")
+    let rectangle = new Rectangle(length, width);
+    console.log(rectangle.rectangularArea());
+    console.log(rectangle.rectanglePerimeter());
+
+
+</script>
+</body>
+</html>
