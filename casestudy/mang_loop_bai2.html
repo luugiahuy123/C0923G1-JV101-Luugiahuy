@@ -6,9 +6,23 @@
 </head>
 <body>
 <script>
-    function missingValue(A,B){
-
+    function findMissingElements(A, B) {
+        let missingElements = [];
+        for (let i = 0; i < B.length; i++) {
+            let isMissing = true;
+            for (let j = 0; j < A.length; j++) {
+                if (B[i] === A[j]) {
+                    isMissing = false;
+                    break;
+                }
+            }
+            if (isMissing) {
+                missingElements.push(B[i]);
+            }
+        }
+        return missingElements.sort();
     }
+
     let A = [];
     let lengArrA = +parseInt(prompt("so phan tu mang A"));
     let B = [];
@@ -19,6 +33,9 @@
     for (let i = 0; i < lengArrB; i++) {
         B[i] = +prompt("nhap so phan tu mang B");
     }
+    let result = findMissingElements(A,B);
+    console.log(result);
+
 
 </script>
 </body>
