@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tax;
+    let salary = +parseInt(prompt("phan luong hang thang"));
+    let netSalary
+    if (salary > 15) {
+        tax = salary * 20 / 100;
+        netSalary = salary - tax;
+    } else if (salary <= 15 && salary >= 7) {
+        tax = salary * 10 / 100;
+        netSalary = salary - tax;
+    } else {
+        tax = salary * 5 / 100;
+        netSalary = salary - tax;
+    }
+    document.write(tax + "tien thue phai nop" + "<br>");
+    document.write(netSalary + "so luong rong" + "<br>");
+
+
+</script>
+
+</body>
+</html>

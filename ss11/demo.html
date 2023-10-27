@@ -38,6 +38,24 @@
         }
         document.write("<br>")
     }
+    function veTamGiacCan(n) {
+        let tamGiac = '';
+
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i; j++) {
+                tamGiac += '&nbsp;';
+            }
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                tamGiac += '*';
+            }
+
+            tamGiac += '<br>';
+        }
+
+        return tamGiac;
+    }
+
+    document.write(veTamGiacCan(5));
 
 
 </script>
