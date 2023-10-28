@@ -11,7 +11,7 @@
         let maxFraction = numerators[0] / denominators[0];
 
         for (let i = 1; i < numerators.length; i++) {
-            const fraction = numerators[i] / denominators[i];
+            let fraction = numerators[i] / denominators[i];
             if (fraction > maxFraction) {
                 maxIndex = i;
                 maxFraction = fraction;
