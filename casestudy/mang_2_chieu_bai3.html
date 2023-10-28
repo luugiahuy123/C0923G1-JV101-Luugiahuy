@@ -5,6 +5,44 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function createMatrix(m, n) {
+        let matrix = new Array(m);
+        for (let i = 0; i < m; i++) {
+            matrix[i] = new Array(n);
+            for (let j = 0; j < n; j++) {
+                matrix[i][j] = Number(prompt(`nhap gia tri phan tu[${i}][${j}]: `, "0"));
+            }
+        }
+        return matrix;
+    }
+
+    function findMinMaxInMatrix(matrix) {
+        let min = matrix[0][0], max = matrix[0][0];
+
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
+                }
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
+                }
+            }
+        }
+
+        return {min: min, max: max};
+    }
+
+    let m = +parseInt(prompt("nhap so hang m: ", "0"));
+    let n = +parseInt(prompt("nhap so cot n: ", "0"));
+
+    let matrix = createMatrix(m, n);
+    let result = findMinMaxInMatrix(matrix);
+
+    document.write(`so nho nhat la: ${result.min}`);
+    document.write(`so lon nhat la: ${result.max}`);
+</script>
 
 </body>
 </html>

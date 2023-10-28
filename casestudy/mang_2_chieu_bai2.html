@@ -5,6 +5,57 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function createMatrix(m, n) {
+        let matrix = new Array(m);
+        for (let i = 0; i < m; i++) {
+            matrix[i] = new Array(n);
+            for (let j = 0; j < n; j++) {
+                matrix[i][j] = Number(prompt(`nhap gia tri phan tu [${i}][${j}]: `, "0"));
+            }
+        }
+        return matrix;
+    }
 
+    function isPrime(n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    function listAndCountPrimesInMatrix(matrix) {
+        let primes = [];
+        let count = 0;
+
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (isPrime(matrix[i][j])) {
+                    primes.push(matrix[i][j]);
+                    count++;
+                }
+            }
+        }
+
+        return {primes: primes, count: count};
+    }
+
+    let m = +parseInt(prompt("nhap so hang m: ", "0"));
+    let n = +parseInt(prompt("nhap so cot n: ", "0"));
+
+    let matrix = createMatrix(m, n);
+    let result = listAndCountPrimesInMatrix(matrix);
+
+    document.write(`ca so nguyen to la: ${result.primes}`);
+    document.write(`so luong nguyen to la: ${result.count}`);
+
+
+</script>
 </body>
 </html>

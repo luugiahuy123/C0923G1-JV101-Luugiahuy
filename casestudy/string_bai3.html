@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let count = 0;
+
+        for (let i = 0; i < s1.length; i++) {
+            if (s2.includes(s1[i])) {
+                count++;
+                s2 = s2.replace(s1[i], '');
+            }
+        }
+
+        return count;
+    }
+
+    let s1 = prompt("phap chuoi s1");
+    let s2 = prompt("nhap chuoi s2");
+    let result = commonCharacterCount(s1, s2);
+    console.log(`ket qua: ${result}`);
+</script>
+
+</body>
+</html>
