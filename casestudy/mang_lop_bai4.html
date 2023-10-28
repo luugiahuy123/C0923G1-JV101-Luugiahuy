@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cafePrice = 15000;
+    let camVatPrice = 20000;
+    let caRotPrice = 25000;
+    let caChuaPrice = 30000;
+    let nuocLocPrice = 10000;
+    let nuocDuaPrice = 15000;
+
+    let totalAmount = 0;
+
+    do {
+        console.log("Danh sách các loại thức uống:");
+        console.log("1. Cafe");
+        console.log("2. Cam vắt");
+        console.log("3. Nước ép cà rốt");
+        console.log("4. Nước ép cà chua");
+        console.log("5. Nước lọc");
+        console.log("6. Nước dừa");
+        console.log("7. Thoát gọi món");
+
+        let choice = parseInt(prompt("Mời bạn chọn thức uống (từ 1 đến 7):"));
+
+        switch (choice) {
+            case 1:
+                let cafeQuantity = parseInt(prompt("Nhập số lượng cafe bạn muốn:"));
+                totalAmount += cafePrice * cafeQuantity;
+                break;
+            case 2:
+                let camVatQuantity = parseInt(prompt("Nhập số lượng cam vắt bạn muốn:"));
+                totalAmount += camVatPrice * camVatQuantity;
+                break;
+            case 3:
+                let caRotQuantity = parseInt(prompt("Nhập số lượng nước ép cà rốt bạn muốn:"));
+                totalAmount += caRotPrice * caRotQuantity;
+                break;
+            case 4:
+                let caChuaQuantity = parseInt(prompt("Nhập số lượng nước ép cà chua bạn muốn:"));
+                totalAmount += caChuaPrice * caChuaQuantity;
+                break;
+            case 5:
+                let nuocLocQuantity = parseInt(prompt("Nhập số lượng nước lọc bạn muốn:"));
+                totalAmount += nuocLocPrice * nuocLocQuantity;
+                break;
+            case 6:
+                let nuocDuaQuantity = parseInt(prompt("Nhập số lượng nước dừa bạn muốn:"));
+                totalAmount += nuocDuaPrice * nuocDuaQuantity;
+                break;
+            case 7:
+                break;
+            default:
+                console.log("Lựa chọn không hợp lệ!");
+                ;
+        }
+    } while (choice !== 7);
+
+    console.log("Tổng số tiền bạn cần phải trả là:", totalAmount, "VNĐ");
+</script>
+</body>
+</html>

@@ -6,21 +6,14 @@
 </head>
 <body>
 <script>
-    function findMissingElements(A, B) {
-        let missingElements = [];
-        for (let i = 0; i < B.length; i++) {
-            let isMissing = true;
-            for (let j = 0; j < A.length; j++) {
-                if (B[i] === A[j]) {
-                    isMissing = false;
-                    break;
-                }
-            }
-            if (isMissing) {
-                missingElements.push(B[i]);
+    function missingValue(A, B) {
+        let result = [];
+        for(let i = 0; i < B.length; i++) {
+            if(!A.includes(B[i])) {
+                result.push(B[i]);
             }
         }
-        return missingElements.sort();
+        return result;
     }
 
     let A = [];
@@ -33,8 +26,7 @@
     for (let i = 0; i < lengArrB; i++) {
         B[i] = +prompt("nhap so phan tu mang B");
     }
-    let result = findMissingElements(A, B);
-    console.log(result);
+    console.log(missingValue(A, B));
 
 
 </script>
