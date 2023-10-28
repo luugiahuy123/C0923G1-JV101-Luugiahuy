@@ -7,7 +7,7 @@
 <body>
 <script>
     function differentSymbolsNaive(s) {
-]        let uniqueChars = [];
+        let uniqueChars = [];
 
         for (let i = 0; i < s.length; i++) {
             if (!uniqueChars.includes(s[i])) {
@@ -18,9 +18,9 @@
         return uniqueChars.length;
     }
 
-    let s = "cabca";
+    let s = prompt("nhap xau ky tu");
     let result = differentSymbolsNaive(s);
-    console.log("Có " + result + " ký tự khác nhau.");
+    document.write("Có " + result + " ký tự khác nhau.");
 </script>
 </body>
 </html>

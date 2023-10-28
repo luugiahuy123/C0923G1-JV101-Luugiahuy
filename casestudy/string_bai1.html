@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function chuanHoaXauKyTu(str) {
+        let words = str.split(' ');
 
+        for (let i = 0; i < words.length; i++) {
+            let lowercaseWord = words[i].toLowerCase();
+
+            let capitalizedWord = lowercaseWord.charAt(0).toUpperCase() + lowercaseWord.slice(1);
+
+            words[i] = capitalizedWord;
+        }
+
+        let normalizedStr = words.join(' ');
+
+        return normalizedStr;
+    }
+
+    let inputStr = prompt("nhap xau ky tu");
+    }
+    let normalizedStr = chuanHoaXauKyTu(inputStr);
+    document.write(normalizedStr);
+</script>
 </body>
 </html>

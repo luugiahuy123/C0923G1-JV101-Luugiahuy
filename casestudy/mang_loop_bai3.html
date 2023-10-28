@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    function largestFraction(numerators, denominators) {
-        let maxFractionIndex = 0
-        let maxFractionValue = numerators[0] / denominators[0]
+    function maxFraction(numerators, denominators) {
+        let maxIndex = 0;
+        let maxFraction = numerators[0] / denominators[0];
+
         for (let i = 1; i < numerators.length; i++) {
-            let currentFractionValue = numerators[i] / denominators[i];
-            if (currentFractionValue > maxFractionValue) {
-                maxFractionValue = currentFractionValue;
-                maxFractionIndex = i;
+            const fraction = numerators[i] / denominators[i];
+            if (fraction > maxFraction) {
+                maxIndex = i;
+                maxFraction = fraction;
             }
         }
-        return maxFractionIndex;
+        return maxIndex;
     }
 
     let numerators = [];
@@ -29,8 +30,8 @@
     for (let i = 0; i < lengArrB; i++) {
         denominators[i] = +prompt("nhap so phan tu mang B");
     }
-    let result = largestFraction(numerators, denominators);
-    console.log(largestFraction(numerators, denominators))
+    let result = maxFraction(numerators, denominators);
+    document.write(maxFraction(numerators, denominators))
 </script>
 </body>
 </html>
