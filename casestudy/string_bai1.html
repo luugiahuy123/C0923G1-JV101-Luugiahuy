@@ -11,7 +11,7 @@
             return 'ko phai la xau ky tu';
         }
 
-        let xauDaChuanHoa = input.trim().replace(/\s+/g, ' ');
+        let xauDaChuanHoa = input.trim().replace("\\s+", " ");
 
         xauDaChuanHoa = xauDaChuanHoa.toLowerCase().split(' ').map(function (tu) {
             return tu.charAt(0).toUpperCase() + tu.slice(1);
