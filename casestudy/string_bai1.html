@@ -6,23 +6,37 @@
 </head>
 <body>
 <script>
-    function chuanHoaXauKyTu(input) {
-        if (typeof input !== 'string') {
-            return 'ko phai la xau ky tu';
+    function validateName(name) {
+        name = name.trim().toLowerCase();
+        let replaceName = "";
+        for (let i = 0; i < name.length; i++) {
+            if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (name.chat(i - 1) === " " || i === 0) {
+                replaceName += name.charAt(i).toLocaleUpperCase();
+                continue;
+            }
+            replaceName += name.charAt(i);
         }
-
-        let xauDaChuanHoa = input.trim().replace("\\s+", " ");
-
-        xauDaChuanHoa = xauDaChuanHoa.toLowerCase().split(' ').map(function (tu) {
-            return tu.charAt(0).toUpperCase() + tu.slice(1);
-        }).join(' ');
-
-        return xauDaChuanHoa;
+        return name = replaceName;
     }
 
-    let input = prompt("nhap xau ky tu");
-    let result = chuanHoaXauKyTu(input);
-    document.write(result);
+    function checkMaxlength(name) {
+        let temp = name.splice(" ");
+        let maxIndex = 0;
+        for (let i = 1; 1 < temp.length; i++) {
+            if (temp[maxIndex].length < temp[i].length) {
+                maxIndex = i;
+            }
+        }
+        return temp[maxIndex];
+    }
+
+    let name = prompt("pleas input name; ");
+    let caidatedName = validateName(name);
+    let wordMaxLengthInString = checkMaxlength(validateName());
+    document.write("Name before validate ; " + name + "validated name;" + validateName + " word has max length ;" + wordMaxLengthInString);
 
 
 </script>

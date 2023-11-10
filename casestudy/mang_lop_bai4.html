@@ -5,15 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<h1> Menu  </h1>
+<h1> Menu </h1>
 1 cafe = 12000<br>
-2 camVat = 25000<br>
-3 caRot = 15000<br>
-4 caChua = 15000<br>
-5 nuocLoc = 10000<br>
-6 nuocDua = 20000<br>
+2 cam vat = 25000<br>
+3 ca rot = 15000<br>
+4 ca chua = 15000<br>
+5 nuoc loc = 10000<br>
+6 nuoc dua = 20000<br>
 7 thoát gọi món<br>
 <button onclick="add()">Gọi món</button>
+<p id="result"></p>
 <script>
     function add() {
         let cafePrice = 12000;
@@ -22,47 +23,48 @@
         let caChuaPrice = 15000;
         let nuocLocPrice = 10000;
         let nuocDuaPrice = 20000;
-
+        let choice;
         let totalAmount = 0;
-
+        let result = 0;
         do {
-
-            let choice = +parseInt(prompt("Mời bạn chọn thức uống (từ 1 đến 7):"));
-
+            debugger;
+            choice = +parseInt(prompt("Mời bạn chọn thức uống (từ 1 đến 7):"));
+            result += totalAmount;
             switch (choice) {
                 case 1:
                     let cafe = +parseInt(prompt("Nhập số lượng cafe bạn muốn:"));
-                    totalAmount = cafePrice * cafe;
+                    totalAmount += cafePrice * cafe;
                     break;
                 case 2:
                     let camVat = +parseInt(prompt("Nhập số lượng cam vắt bạn muốn:"));
-                    totalAmount = camVatPrice * camVat;
+                    totalAmount += camVatPrice * camVat;
                     break;
                 case 3:
                     let caRot = +parseInt(prompt("Nhập số lượng nước ép cà rốt bạn muốn:"));
-                    totalAmount = caRotPrice * caRot;
+                    totalAmount += caRotPrice * caRot;
                     break;
                 case 4:
                     let caChua = +parseInt(prompt("Nhập số lượng nước ép cà chua bạn muốn:"));
-                    totalAmount = caChuaPrice * caChua;
+                    totalAmount += caChuaPrice * caChua;
                     break;
                 case 5:
                     let nuocLoc = +parseInt(prompt("Nhập số lượng nước lọc bạn muốn:"));
-                    totalAmount = nuocLocPrice * nuocLoc;
+                    totalAmount += nuocLocPrice * nuocLoc;
                     break;
                 case 6:
                     let nuocDua = +parseInt(prompt("Nhập số lượng nước dừa bạn muốn:"));
-                    totalAmount = nuocDuaPrice * nuocDua;
+                    totalAmount += nuocDuaPrice * nuocDua;
                     break;
                 case 7:
                     break;
                 default:
                     console.log("Lựa chọn không hợp lệ!");
-
             }
-            document.write("Tổng số tiền bạn cần phải trả là:" + totalAmount + "VNĐ" + "<br>");
 
-        } while (choice < 7);
+
+        } while (choice !== 7);
+
+        document.getElementById("result").innerHTML = "Tổng số tiền bạn cần phải trả là:" + totalAmount + "VNĐ";
     }
 
 </script>

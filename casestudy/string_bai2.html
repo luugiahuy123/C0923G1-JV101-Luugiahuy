@@ -6,21 +6,30 @@
 </head>
 <body>
 <script>
-    function differentSymbolsNaive(s) {
-        let uniqueChars = [];
+    // function differentSymbolsNaive(s) {
+    //     let uniqueChars = [];
+    //
+    //     for (let i = 0; i < s.length; i++) {
+    //         if (!uniqueChars.includes(s[i])) {
+    //             uniqueChars = s[i];
+    //         }
+    //     }
+    //
+    //     return uniqueChars;
+    // }
+    //
+    // let s = prompt("nhap xau ky tu");
+    // let result = differentSymbolsNaive(s);
+    // document.write("co " + result + " ky tu khac nhau.");
 
-        for (let i = 0; i < s.length; i++) {
-            if (!uniqueChars.includes(s[i])) {
-                uniqueChars = s[i];
-            }
+    let str = prompt("Nhaap ky tu");
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        if (!arr.includes(str[i])) {
+            arr.push(str[i]);
         }
-
-        return uniqueChars;
     }
-
-    let s = prompt("nhap xau ky tu");
-    let result = differentSymbolsNaive(s);
-    document.write("co " + result + " ky tu khac nhau.");
+    document.write(`Co ${arr.length} khac nhau`);
 </script>
 </body>
 </html>

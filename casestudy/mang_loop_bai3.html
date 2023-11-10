@@ -9,9 +9,10 @@
     function maxFraction(numerators, denominators) {
         let maxIndex = 0;
         let maxFraction = numerators[0] / denominators[0];
+        let fraction
 
         for (let i = 1; i < numerators.length; i++) {
-            let fraction = numerators[i] / denominators[i];
+            fraction = numerators[i] / denominators[i];
             if (fraction > maxFraction) {
                 maxIndex = i;
                 maxFraction = fraction;
@@ -31,7 +32,7 @@
         denominators[i] = +prompt("nhap so phan tu mang B");
     }
     let result = maxFraction(numerators, denominators);
-    document.write(maxFraction(numerators, denominators))
+    document.write(result);
 </script>
 </body>
 </html>

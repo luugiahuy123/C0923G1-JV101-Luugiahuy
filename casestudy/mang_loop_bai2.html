@@ -6,27 +6,27 @@
 </head>
 <body>
 <script>
-    function missingValue(A, B) {
+    function missingValue(a, b) {
         let result = [];
-        for (let i = 0; i < B.length; i++) {
-            if (!A.includes(B[i])) {
-                result.push(B[i]);
+        for (let i = 0; i < b.length; i++) {
+            if (!A.includes(b[i]) && !result.includes(b[i])) {
+                result.push(b[i]);
             }
         }
         return result;
     }
 
-    let A = [];
-    let lengArrA = +parseInt(prompt("so phan tu mang A"));
+    let a = [];
+    let lengArrA = +parseInt(prompt("do dai mang A"));
     for (let i = 0; i < lengArrA; i++) {
-        A[i] = +prompt("nhap so pha tu mang A");
+        a[i] = +prompt("nhap so pha tu mang A");
     }
-    let B = [];
-    let lengArrB = +parseInt(prompt("so phan tu mang B "));
+    let b = [];
+    let lengArrB = +parseInt(prompt("do dai mang B "));
     for (let i = 0; i < lengArrB; i++) {
-        B[i] = +prompt("nhap so phan tu mang B");
+        b[i] = +prompt("nhap so phan tu mang B");
     }
-    console.log(missingValue(A, B));
+    console.log(missingValue(a, b));
 
 
 </script>

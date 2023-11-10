@@ -1,10 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            margin-top: 5%;
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-$END$
+<button onclick="addNewStudent()">thêm học viên</button>
+<div id="result"></div>
+<script>
+    class Student {
+        constructor(code, name, className, email, birthday, module) {
+            this.code = code;
+            this.name = name;
+            this.className = className;
+            this.email = email;
+            this.birthday = birthday;
+            this.module = module;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(newName) {
+            this.name = newName;
+        }
+
+        getCode() {
+            return this.code;
+        }
+
+        setCode(newCode) {
+            this.code = newCode;
+        }
+
+        getClassName() {
+            return this.className;
+        }
+
+        setClassName(newClassName) {
+            this.className = newClassName;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(newEmail) {
+            this.email = newEmail;
+        }
+
+        getBirthday() {
+            return this.birthday;
+        }
+
+        setBirthday(newBirthday) {
+            this.birthday = newBirthday;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setModule(newModule) {
+            this.module = newModule;
+        }
+
+        toString() {
+            return "Mã học viên: " + this.code + " .Tên: " + this.name
+                + ` .Tên lớp: ${this.className}. Email: ${this.email}. Birthday: ${this.birthday}
+            . Module: ${this.module}`;
+        }
+    }
+
+    let arrayStudent = [];
+    let student = new Student("HV-001", "Thắm", "C09", "hongtham@..", "01/01/1998", 1);
+    let student1 = new Student("HV-002", "Vi", "C09", "trucvi@..", "01/01/2005", 1);
+    let student2 = new Student("HV-003", "Pháp", "C09", "dangphap@..", "01/01/1997", 1);
+    arrayStudent.push(student, student1, student2);
+
+    function displayStudent(arr) {
+        let str = "<table border=\"1px\">" +
+            "    <tr>" +
+            "        <th>Mã học viên</th>" +
+            "        <th>Tên học viên</th>" +
+            "        <th>Lớp</th>" +
+            "        <th>Email</th>" +
+            "        <th>Ngày sinh</th>" +
+            "        <th>Module</th>" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "<td>" + arr[i].getCode() + "</td>" +
+                "<td>" + arr[i].getName() + "</td>" +
+                "<td>" + arr[i].getClassName() + "</td>" +
+                "<td>" + arr[i].getEmail() + "</td>" +
+                "<td>" + arr[i].getBirthday() + "</td>" +
+                "<td>" + arr[i].getModule() + "</td>" +
+                "</tr>";
+        }
+        str += "</table>";
+        document.getElementById("result").innerHTML = str;
+    }
+
+    displayStudent(arrayStudent);
+
+    function addNewStudent() {
+        let code = prompt("Nhập mã học viên");
+        let name = prompt("Nhập tên học viên");
+        let className = prompt("Nhập lớp học viên");
+        let email = prompt("Nhập email học viên");
+        let birthday = prompt("Nhập ngày sinh học viên");
+        let module = prompt("Nhập module học viên");
+        let student = new Student(code, name, className, email, birthday, module);
+        arrayStudent.push(student);
+        alert("Thêm mới học viên thành công");
+        displayStudent(arrayStudent);
+    }
+
+    function editStudent() {
+        let code = prompt("Nhập mã học viên cần sửa");
+        let count = 0;
+        for (let i = 0; i < arrayStudent.length; i++) {
+            if (code === arrayStudent[i].getCode()) {
+                count++;
+                let code = prompt("Nhập mã học viên");
+                let name = prompt("Nhập tên học viên");
+                let className = prompt("Nhập lớp học viên");
+                let email = prompt("Nhập email học viên");
+                let birthday = prompt("Nhập ngày sinh học viên");
+                let module = prompt("Nhập module học viên");
+                arrayStudent[i] = new Student(code, name, className, email, birthday, module);
+                break;
+            }
+        }
+        displayStudent(arrayStudent);
+        if (count !== 1) {
+            alert("Mã học viên không tồn tại");
+        }
+    }
+
+    function remove() {
+        let code = prompt("Nhập mã học viên cần xóa");
+        let count = 0;
+        for (let i = 0; i < arrayStudent.length; i++) {
+            if (code === arrayStudent[i].getCode()) {
+                count++;
+                let choice = confirm("Có chắc chắn xóa không ?");
+                // OK -> true === true
+                // Hủy -> false
+                if (choice) {
+                    arrayStudent.splice(i, 1);
+                }
+                break;
+            }
+        }
+        displayStudent(arrayStudent);
+        if (count !== 1) {
+            alert("Mã học viên không tồn tại");
+        }
+    }
+
+
+</script>
+
 </body>
 </html>
