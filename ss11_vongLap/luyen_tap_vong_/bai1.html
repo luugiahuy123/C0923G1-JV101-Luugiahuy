@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-    let i = parseInt(prompt("nhap so"));
-    for (let count = 0; i < 100; count++) {
-        ++i;
+
+    for (let i = 0; i < 100; i++) {
         document.write(i + "<br>");
+        if (i === 99) {
+            alert("hoang thanh")
+        }
     }
-    alert("hoang thanh")
+
 </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let fibo1
+    let fibo = [0, 1]
+    let sum = 0;
+
+    for (let i = 2; i < 20; i++) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+        sum += fibo[i]
+
+    }
+    document.write(fibo + "<br>");
+    document.write(sum + "<br>")
+    for (let i = 1; i < fibo.length; i++) {
+        if (fibo[i] % 5 === 0) {
+            fibo1 = fibo[i];
+            break
+        }
+    }
+    document.write(fibo1 + "<br>")
+
+</script>
+</body>
+</html>
