@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let array = [];
+    let index = 0;
+
+    for (let i = 0; i < 10; i++) {
+        array[i] = +parseInt(prompt("nhập số nguyên" + i))
+    }
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                index = i
+            }
+        }
+        document.write(max + "so lon nhat")
+        document.write(index + "vi tri")
+
+</script>
+</body>
+</html>

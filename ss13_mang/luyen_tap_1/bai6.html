@@ -11,16 +11,14 @@
         array[i] = +prompt("nhap so nguyen");
     }
     let v = +prompt("nhap so V")
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === v) {
-            count = 1;
-            break
-        }
-        if (count === 1) {
-            document.write("v is in the array");
-        } else {
-            document.write("v is not in the array");
-        }
+    let count = 0
+    if (array.includes(v)) {
+        count++
+    }
+    if (count === 1) {
+        document.write("v is in the array");
+    } else {
+        document.write("v is not in the array");
     }
 
 </script>

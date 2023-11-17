@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = []
+    for (let i = 0; i < 10; i++) {
+        array[i] = +prompt("nhap so nguyen")
+    }
+    let v = +prompt("nhap so V");
+    if (array.includes(v)){
+        let index = array.indexOf(v);
+        array.splice(index, 1);
+        alert("phan tu v da dc xoa")
+    } else {
+        alert("v ko co nam trong mang")
+    }
+    document.write(array +" v da dc xoa khoi mang")
+
+
+</script>
+</body>
+</html>
