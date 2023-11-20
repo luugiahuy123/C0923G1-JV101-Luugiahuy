@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = [];
+  let lengOfN = +parseInt(prompt("nhap do dai mang n"));
+  for (let i = 0; i < lengOfN; i++) {
+      n[i] = +prompt("nhap phan tu mang n")
+  }
+  let m =[];
+  for (let i = 0; i < n.length; i++) {
+      if (n[i] % 2 === 0 ){
+          m.push(n[i]);
+      }
+  }document.write(m + "so phan tu trong mang n chia het cho 2");
+</script>
+</body>
+</html>

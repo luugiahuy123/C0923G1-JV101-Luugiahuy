@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let array = []
+    let array = [];
     for (let i = 0; i < 10; i++) {
         array[i] = +prompt("nhap so nguyen");
     }
-    let v = +prompt("nhap so V")
-    let count = 0
+    let v = +prompt("nhap so V");
+    let count = 0;
     if (array.includes(v)) {
-        count++
+        count++;
     }
     if (count === 1) {
         document.write("v is in the array");

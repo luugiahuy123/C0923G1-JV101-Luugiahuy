@@ -6,23 +6,44 @@
 </head>
 <body>
 <script>
-    let array = []
-    let lengOfArray = +parseInt(prompt("nhap so nguyen"))
+    // let array = []
+    // let lengOfArray = +parseInt(prompt("nhap so nguyen"))
+    // for (let i = 0; i < lengOfArray; i++) {
+    //     array[i] = +prompt("nhập số nguyên" + i)
+    // }
+    // let max = 0;
+    // let sum = 0;
+    // let medium = 0;
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] > max) {
+    //         max = array[i];
+    //     }
+    //     sum += array[i];
+    // }
+    // medium = sum / array.length
+    // document.write(max + "so lon nhat" + "<br>")
+    // document.write(medium + "gia tri trung binh" + "<br>")
+    function total(medium) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max){
+                max = arr[i];
+            }
+            sum += arr[i]
+        }
+        document.write(max + "gia tri lon nhat ");
+         return medium = sum / arr.length
+    }
+    let arr = [];
+    let lengOfArray = +parseInt(prompt("nhap so nguyen"));
     for (let i = 0; i < lengOfArray; i++) {
-        array[i] = +prompt("nhập số nguyên" + i)
+        arr[i] = +parseInt(prompt("nhap so nguyen" + i));
     }
     let max = 0;
     let sum = 0;
     let medium = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > max) {
-            max = array[i];
-        }
-        sum += array[i];
-    }
-    medium = sum / array.length
-    document.write(max + "so lon nhat" + "<br>")
-    document.write(medium + "gia tri trung binh" + "<br>")
+    let result = total(medium);
+    document.write(result + " gia tri trung binh");
+
 
 </script>
 </body>

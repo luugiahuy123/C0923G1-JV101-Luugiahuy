@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n =[];
+    let lengOfn = +parseInt(prompt("nhap do dai mang n"));
+    for (let i = 0; i < lengOfn; i++) {
+        n[i] = +parseInt(prompt("nhap cac so nguyen"))
+    }
+    let sum = 0
+    for (let i = 0; i < n.length; i++) {
+        sum += n[i]
+    }
+    document.write(sum + "tong cua mang n");
+</script>
+</body>
+</html>

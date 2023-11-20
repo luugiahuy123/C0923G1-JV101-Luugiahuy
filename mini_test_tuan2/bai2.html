@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = [];
+    let lengOfN = +parseInt(prompt("nhap mang n"));
+    for (let i = 0; i < lengOfN; i++) {
+        n[i] = +prompt("nhap phan tu mang n")
+    }
+    let a = +prompt("nhap 1 so ");
+    let count = 0;
+    for (let i = 0; i < n.length; i++) {
+        if (n[i] === a){
+            count++;
+        }
+    }
+    document.write(count + "so lan a xuan hien trong mang n")
+</script>
+</body>
+</html>

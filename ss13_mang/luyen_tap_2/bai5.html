@@ -6,12 +6,31 @@
 </head>
 <body>
 <script>
-    let arr1 = prompt("nhap chuoi thu 1");
-    let arr2 = prompt("nhap chuoi thu 2");
-    if (arr1 === arr2) {
-        document.write(" hai chuoi giong nhau");
+    // let arr1 = prompt("nhap chuoi thu 1");
+    // let arr2 = prompt("nhap chuoi thu 2");
+    // if (arr1 === arr2) {
+    //     document.write(" hai chuoi giong nhau");
+    // } else {
+    //     document.write("hai chuoi khac nhau");
+    // }
+    function checkstr(str1,str2){
+        if (str1.length !== str2.length){
+            return false;
+        }
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] !== str2[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    let str1 = prompt("nhap chuoi thu 1");
+    let str2 = prompt("nha chuoi thu 2");
+    let result = checkstr(str1, str2);
+    if (result){
+        alert("hai chuoi giong nhau");
     } else {
-        document.write("hai chuoi khac nhau");
+        alert("hai chuoi khac nhau")
     }
 </script>
 </body>

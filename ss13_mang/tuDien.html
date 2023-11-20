@@ -5,7 +5,7 @@
     <title>tuDien</title>
 </head>
 <body>
-<label>Nhap tu: </label>
+<label>Nhập Từ: </label>
 <input id="input" placeholder="nhập từ" type="text">
 <button onclick="transcript()">Dich</button>
 <p id="result"></p>
@@ -14,7 +14,7 @@
         let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
         let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
         let string = document.getElementById("input").value;
-        let index = 0;
+        let index = -1;
         let result;
         for (let i = 0; i < arr_eng.length; i++) {
             if (string === arr_eng[i]) {
@@ -23,8 +23,22 @@
             }
         }
         result = arr_vie[index];
-        document.getElementById("result").innerHTML = result;
+            document.getElementById("result").innerHTML = result;
     }
+    // function transcript() {
+    //     let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+    //     let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+    //     let string = document.getElementById("input").value;
+    //     let index = 0;
+    //     let result;
+    //     for (let i = 0; i < arr_eng.length; i++) {
+    //         if (string === arr_eng[i]){
+    //             for (let j = 0; j < arr_vie.length; j++) {
+    //
+    //             }
+    //         }
+    //     }
+    // }
 
 
 </script>

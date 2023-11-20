@@ -11,13 +11,13 @@
     for (let i = 0; i < lengthOfArr; i++) {
         arr[i] = prompt("nhập giá trị phần tử thứ " + i);
     }
-    let swapValue;
-    for (let i = 0; i < lengthOfArr / 2; i++) {
-        swapValue = arr[i];
-        arr[i] = arr[lengthOfArr - 1 - i];
-        arr[lengthOfArr - 1 - i] = swapValue;
-    }
-    document.write(arr.join(""));
+    let swapValue = arr.reverse()
+    // for (let i = 0; i < lengthOfArr / 2; i++) {
+    //     swapValue = arr[i];
+    //     arr[i] = arr[lengthOfArr - 1 - i];
+    //     arr[lengthOfArr - 1 - i] = swapValue;
+    // }
+    document.write(swapValue.join(""));
 
 </script>
 </body>
