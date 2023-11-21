@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1>Translate</h1>
+<input id="key" type=text>
+<button onclick="translate1()">Translate</button>
+<p id="result">kết Quả</p>
+<script>
+    function indexOf1(arr, key) {
+        for (let i = 0; i < arr.length; i++) {
+            if (key == arr[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function translate1() {
+        let key = document.getElementById("key").value;
+        let index = indexOf1(arr_eng, key)
+        let result;
+        if (index != -1) {
+            result = `${key} nghia la ${arr_vie[index]}`
+        } else {
+            let index2 = indexOf1(arr_vie, key);
+            if (index2 != -1) {
+                result = `${key} co nghia la ${arr_eng[index2]}`
+            } else
+                result = `khong tim thay tu ${key}`;
+        }
+        document.getElementById("result").innerText = result;
+    }
+
+    let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+    let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+
+</script>
+</body>
+</html>
