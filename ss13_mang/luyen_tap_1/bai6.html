@@ -6,16 +6,22 @@
 </head>
 <body>
 <script>
+
+    function checkArr(arr1, v1) {
+
+        let count = 0;
+        if (arr1.includes(v1)) {
+            count++;
+        }
+        return count;
+    }
     let array = [];
     for (let i = 0; i < 10; i++) {
-        array[i] = +prompt("nhap so nguyen");
+        array[i] = +prompt("nhap so ");
     }
     let v = +prompt("nhap so V");
-    let count = 0;
-    if (array.includes(v)) {
-        count++;
-    }
-    if (count === 1) {
+    let result = checkArr(array , v);
+    if (result === 1) {
         document.write("v is in the array");
     } else {
         document.write("v is not in the array");

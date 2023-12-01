@@ -21,8 +21,9 @@
     }
 
     let temp = new Temperature(25);
-    console.log(`Nhiệt độ F: ${temp.fahrenheit}`);
-    console.log(`Nhiệt độ Kenvin: ${temp.kelvin}`);
+    document.write(`Nhiệt độ F: ${temp.getfahrenheit()}`)
+    document.write("<br>")
+    document.write(`Nhiệt độ Kenvin: ${temp.getkelvin()}`);
 
 </script>
 </body>

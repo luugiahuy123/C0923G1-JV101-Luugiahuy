@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function timGiaTriLonNhat(mang) {
+        let giaTriLonNhat = mang[0];
+        let viTri = 0;
 
+        for (let i = 1; i < mang.length; i++) {
+            if (mang[i] > giaTriLonNhat) {
+                giaTriLonNhat = mang[i];
+                viTri = i;
+            }
+        }
+
+        return { giaTriLonNhat, viTri };
+    }
+
+    let mangSoNguyen = [];
+    for (let i = 0; i < 10; i++) {
+        mangSoNguyen= parseInt(prompt("Nhập số nguyên vào mảng:"));
+    }
+
+    let { giaTriLonNhat, viTri } = timGiaTriLonNhat(mangSoNguyen);
+
+   document.write("Phần tử có giá trị lớn nhất trong mảng là", giaTriLonNhat + "<br>");
+   document.write("Vị trí của phần tử đó là", viTri);
+</script>
 </body>
 </html>

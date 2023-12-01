@@ -6,20 +6,38 @@
 </head>
 <body>
 <script>
-    let array = []
-    for (let i = 0; i < 10; i++) {
-        array[i] = +parseInt(prompt("nhap so nguyen"));
+
+
+    function checkArr(array, v) {
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == v) {
+                index = i;
+            }
+        }
+            array.splice(index, 1);
+            array.push(0);
+        return array;
     }
-    let v = +prompt("nhap so V");
-    if (array.includes(v)){
-        let index = array.indexOf(v);
-        array.splice(index, 1);
-        alert("phan tu v da dc xoa");
-    } else {
-        alert("v ko co nam trong mang");
-    }
-    array.push(0);
-    document.write(array +" v da dc xoa khoi mang");
+    let array1 = [1,2,3,4,5,6,7,8,9,0];
+    // for (let i = 0; i < 10; i++) {
+    //     array1[i] = +parseInt(prompt("nhap so nguyen"));
+    // }
+    // let v1 = 0 +prompt("nhap so V");
+    let v1 = 5;
+    let result = checkArr(array1, v1);
+    document.write(result + " v da dc xoa khoi mang");
+    // if (array.includes(v)){
+    //     let index = array.indexOf(v);
+    //     array.splice(index, 1);
+    //     alert("phan tu v da dc xoa");
+    // } else {
+    //     alert("v ko co nam trong mang");
+    // }}
+
+    // array.push(0);
+
+
 
 
 </script>
